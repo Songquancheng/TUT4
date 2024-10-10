@@ -1,0 +1,70 @@
+{
+    "userProfiles": [
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe@example.com",
+        "dateOfBirth": "1990-05-15",
+        "preferences": {
+          "theme": "dark",
+          "language": "English",
+          "notifications": {
+            "email": true,
+            "sms": false,
+            "push": true,
+            "subscription":true
+          }
+        },
+        "profile":{
+          "street":"xinyuan",
+          "city":"tianjin",
+          "state":"China",
+          "zipCode":"2222"
+        }
+      },
+      {
+        "firstName": "Jane",
+        "lastName": "Smith",
+        "email": "jane.smith@example.com",
+        "dateOfBirth": "1985-10-22",
+        "preferences": {
+          "theme": "light",
+          "language": "Spanish",
+          "notifications": {
+            "email": true,
+            "sms": true,
+            "push": false,
+            "subscription":true
+          }
+        },
+        "profile":{
+          "street":"guangyang",
+          "city":"beijing",
+          "state":"Indian",
+          "zipCode":"1111"
+        }
+      },
+      {
+        "firstName": "Alice",
+        "lastName": "Brown",
+        "email": "alice.brown@example.com",
+        "dateOfBirth": "1995-07-08",
+        "preferences": {
+          "theme": "dark",
+          "language": "French",
+          "notifications": {
+            "email": false,
+            "sms": true,
+            "push": true,
+            "subscription":true
+          }
+        },
+        "profile":{
+          "street":"xinhua",
+          "city":"langfang",
+          "state":"Roman",
+          "zipCode":"0000"
+        }
+      }
+    ]
+}

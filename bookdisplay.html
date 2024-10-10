@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML to HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .book {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .book-title {
+            font-weight: bold;
+        }
+        .book-author {
+            color: #555;
+        }
+        .book-price {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Books Information</h1>
+    <div id="books-container"></div>
+
+    <script>
+        // Load XML data
+        const xmlData = `<?xml version="1.0" encoding="UTF-8"?>
+            <books>
+                <book id="1001234567">
+                    <title>book1</title>
+                    <author>SQC1</author>
+                    <price>101$</price>
+                </book>
+                <book id="1001234568">
+                    <title>book2</title>
+                    <author>SQC2</author>
+                    <price>102$</price>
+                </book>
+                <book id="1001234569">
+                    <title>book3</title>
+                    <author>SQC3</author>
+                    <price>103$</price>
+                </book>
+            </books>`;
+
+        // Parse the XML string into a DOM object
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xmlData, 'application/xml');
+
+        // Get the 'books' element
+        const books = xmlDoc.getElementsByTagName('book');
+
+        // Find the container where we will display the books
+        const booksContainer = document.getElementById('books-container');
+
+        // Loop through each book element and display its data
+        for (let i = 0; i < books.length; i++) {
+            const book = books[i];
+
+            // Get book details from XML
+            const title = book.getElementsByTagName('title')[0].textContent;
+            const author = book.getElementsByTagName('author')[0].textContent;
+            const price = book.getElementsByTagName('price')[0].textContent;
+
+            // Create a book div
+            const bookDiv = document.createElement('div');
+            bookDiv.classList.add('book');
+
+            // Add title, author, and price elements to the book div
+            bookDiv.innerHTML = `
+                <div class="book-title">Title: ${title}</div>
+                <div class="book-author">Author: ${author}</div>
+                <div class="book-price">Price: ${price}</div>
+            `;
+
+            // Append the book div to the container
+            booksContainer.appendChild(bookDiv);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE body []>
+<books>
+    <book id="1001234567">
+        <title>book1</title>
+        <author>SQC1</author>
+        <price>101$</price>
+    </book>
+        <book id="1001234568">
+        <title>book2</title>
+        <author>SQC2</author>
+        <price>102$</price>
+    </book>
+        <book id="1001234569">
+        <title>book3</title>
+        <author>SQC3</author>
+        <price>103$</price>
+    </book>
+</books>
